@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>College Predictor - Find Colleges Based on JEE Rank</title>
+    <meta name="author" content="Sarvesh Singh Chauhan">
+    <meta name="description"
+          content="College Predictor is a free website that generates a list of colleges based on JEE Mains and Advanced ranks. It also converts general ranks to category ranks and provides news articles. Find the best colleges for your JEE rank today!">
+    <meta name="keywords"
+          content="college predictor, JEE rank, college list, general rank converter, JEE mains news, free college predictor, college predictor jee, college predictor jee mains, college predictor jee advanced, college predictor csab, JEE college predictor tool, Engineering college predictor, Rank vs college predictor, JEE mains rank converter, JEE advanced college predictor, JEE main college predictor, Best college predictor for JEE, JEE mains college list, JEE mains news and updates, CSAB counselling, JEE counselling process, JEE seat allotment results, JEE college-wise cutoff, JEE college comparison tool, JEE college ranking list, JEE college admission process">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="icon" type="image/x-icon" href="assets/logo_dark.png"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+
+
+    <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="js/jquery.csv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.0/papaparse.min.js" integrity="sha512-BLtgHExslovxU1AJD+h/x7c8GGLvTTYe1evotrEkUDj0vTKRz6f4XAvziWO/7ykOfTnHvNWmx0vn14j8NlYuBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.0/papaparse.js" integrity="sha512-we7B2mlfFygfCw6Ivy7so/0gOC0XYEowMCTaVjK2Fa1zui241ASM60KIckSBLVXcJuuhHpv/gGzQ2wqy/Y81qw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+  </head>
+  <body>
+    <header id="header" class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow p-0">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-bold m-1" href="index.html" style="font-size: 1.8rem;">
+                <img src="assets/logo_light.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top ms-2 me-2"/>College
+                Predictor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">College Predictor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" target="_blank" href="counselling.html">Counselling Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#FAQ">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                            Engineering
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Top IIT</a></li>
+                            <li><a class="dropdown-item" href="#">Top NIT</a></li>
+                            <li><a class="dropdown-item" href="#">Top IIIT</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Top Private Colleges</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#footer">About</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <div id="ranks" style="overflow-x: scroll"></div>
+
+    <section class="bg-light text-dark p-1 text-justify" id="iit_college">
+      <div class="container pt-1">
+          <h3 class="text-center bg-warning text-decoration-underline">IIT Colleges</h3>
+          <div class="container-fluid" id="container_iit" style="overflow-x: scroll"></div>
+      </div>
+    </section>
+    <br/>
+    <section class="bg-light text-dark p-1 text-justify" id="nit_college">
+      <div class="container pt-1">
+          <h3 class="text-center bg-warning text-decoration-underline">NIT Colleges</h3>
+          <div class="container-fluid" id="container_nit" style="overflow-x: scroll"></div>
+      </div>
+    </section>
+    <br/>
+    <section class="bg-light text-dark p-1 text-justify" id="iiit_college">
+      <div class="container pt-1">
+          <h3 class="text-center bg-warning text-decoration-underline">IIIT Colleges</h3>
+          <div class="container-fluid" id="container_iiit" style="overflow-x: scroll"></div>
+      </div>
+    </section>
+    <br/>
+    <section class="bg-light text-dark p-1 text-justify" id="govt_college">
+      <div class="container pt-1">
+          <h3 class="text-center bg-warning text-decoration-underline">Govt. Funded Colleges</h3>
+          <div class="container-fluid" id="container_govt" style="overflow-x: scroll"></div>
+      </div>
+    </section>
+
+    <footer class="footer text-center text-light">
+      <div class="container">
+          <div class="row">
+              <!-- Footer Social Icons-->
+              <div class="col-lg-12 mb-5 mb-lg-0">
+                  <h4 class="text-uppercase mb-4">Around the Web</h4>
+                  <a class="btn btn-outline-light btn-social mx-1" href="#">
+                      <i class="fab fa-fw fa-facebook-f"></i>
+                  </a>
+                  <a class="btn btn-outline-light btn-social mx-1" href="#">
+                      <i class="fab fa-fw fa-twitter"></i>
+                  </a>
+                  <a class="btn btn-outline-light btn-social mx-1" href="#">
+                      <i class="fab fa-fw fa-instagram"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer>
+
+
+    <!-- JavaScripts and JQuery -->
+    <script src="js/csv_to_html_table.js"></script>
+    <script>
+        getValues();
+    </script>
+
+  </body>
+</html>

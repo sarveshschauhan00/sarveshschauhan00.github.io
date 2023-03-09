@@ -1,0 +1,39 @@
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+header nav div {
+  background-color: #3C84AB;
+}
+
+.transparent-div {
+    background-color: var(--bs-main);
+}
+
+.main-background {
+  background-color: var(--bs-main);
+}
+
+/* news cards sliding section */
+.carousel-inner > .item {
+  -webkit-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.carousel-inner .active.left { left: -33%; }
+.carousel-inner .active.right { left: 33%; }
+.carousel-inner .next        { left:  33%; }
+.carousel-inner .prev        { left: -33%; }
+.carousel-control.left,.carousel-control.right {
+  background-image:none;
+}
+
+/* Footer editing */
+footer {
+  padding-top: 1%;
+  padding-bottom: 2%;
+  background-color: #3C84AB;
+}
