@@ -1,86 +1,90 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>College Predictor - Find Colleges Based on JEE Rank</title>
-    <meta name="author" content="Sarvesh Singh Chauhan">
-    <meta name="description"
-          content="College Predictor is a free website that generates a list of colleges based on JEE Mains and Advanced ranks. It also converts general ranks to category ranks and provides news articles. Find the best colleges for your JEE rank today!">
-    <meta name="keywords"
-          content="college predictor, JEE rank, college list, general rank converter, JEE mains news, free college predictor, college predictor jee, college predictor jee mains, college predictor jee advanced, college predictor csab, JEE college predictor tool, Engineering college predictor, Rank vs college predictor, JEE mains rank converter, JEE advanced college predictor, JEE main college predictor, Best college predictor for JEE, JEE mains college list, JEE mains news and updates, CSAB counselling, JEE counselling process, JEE seat allotment results, JEE college-wise cutoff, JEE college comparison tool, JEE college ranking list, JEE college admission process">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>College Predictor - Find Colleges Based on JEE Rank</title>
+  <meta name="author" content="Sarvesh Singh Chauhan">
+  <meta name="description"
+    content="College Predictor is a free website that generates a list of colleges based on JEE Mains and Advanced ranks. It also converts general ranks to category ranks and provides news articles. Find the best colleges for your JEE rank today!">
+  <meta name="keywords"
+    content="college predictor, JEE rank, college list, general rank converter, JEE mains news, free college predictor, college predictor jee, college predictor jee mains, college predictor jee advanced, college predictor csab, JEE college predictor tool, Engineering college predictor, Rank vs college predictor, JEE mains rank converter, JEE advanced college predictor, JEE main college predictor, Best college predictor for JEE, JEE mains college list, JEE mains news and updates, CSAB counselling, JEE counselling process, JEE seat allotment results, JEE college-wise cutoff, JEE college comparison tool, JEE college ranking list, JEE college admission process">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="icon" type="image/x-icon" href="assets/logo_dark.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="assets/logo_dark.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <link href="css/styles.css" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2ZVEKTD33"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2ZVEKTD33"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-        gtag('js', new Date());
+    gtag('js', new Date());
 
-        gtag('config', 'G-J2ZVEKTD33');
-    </script>
+    gtag('config', 'G-J2ZVEKTD33');
+  </script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7728305301915307"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7728305301915307"
+    crossorigin="anonymous"></script>
 
-    <meta name="google-site-verification" content="5q2gJu6qpX8QhgHNX7lI6oRJQaTShj3Q4Y85WnfOLbM" />
+  <meta name="google-site-verification" content="5q2gJu6qpX8QhgHNX7lI6oRJQaTShj3Q4Y85WnfOLbM" />
 </head>
+
+
 
 <body>
   <header id="header" class="header">
     <nav class="navbar navbar-expand-lg navbar-dark shadow p-0">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold m-1" href="index.html" style="font-size: 1.8rem;">
-            <img src="assets/logo_light.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top ms-2 me-2"/>College
-            Predictor</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <img src="assets/logo_light.png" alt="Logo" width="40" height="40"
+            class="d-inline-block align-text-top ms-2 me-2" />College
+          Predictor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">College Predictor</a>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">College Predictor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" target="_blank" href="counselling.html">Counselling Tools</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#FAQ">FAQ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Engineering
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Top IIT</a></li>
+                <li><a class="dropdown-item" href="#">Top NIT</a></li>
+                <li><a class="dropdown-item" href="#">Top IIIT</a></li>
+                <li><a class="dropdown-item" href="#">Top Govt Colleges</a></li>
+                <li>
+                  <hr class="dropdown-divider">
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" target="_blank" href="counselling.html">Counselling Tools</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#FAQ">FAQ</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                        Engineering
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Top IIT</a></li>
-                        <li><a class="dropdown-item" href="#">Top NIT</a></li>
-                        <li><a class="dropdown-item" href="#">Top IIIT</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Top Private Colleges</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#footer">About</a>
-                </li>
-            </ul>
+                <li><a class="dropdown-item" href="#">Top Private Colleges</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#footer">About</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -88,221 +92,312 @@
 
   <main>
     <section class="bg-light text-dark p-1 text-justify">
-      <div class="container-fluid">
-        <!-- Contact Section Heading-->
-        <h2 class="text-center text-uppercase pt-3">Enter
-            Your Exam Details</h2>
-        </br>
+      <div class="container col-lg-12">
+        <div class="container row">
+          <div class="container col-md-12 card mt-2">
 
-        <!-- Contact Section Form-->
-        <div class="row justify-content-center">
-          <div class="container col-lg-5">
-            <div class="card bg-light shadow rounded m-2">
-              <div class="card-header text-center font-weight-bold bg-warning">JEE Details</div>
-                <div class="card-body" style="background-color: antiquewhite;">
-                  <form method="post" id="inputRankForm" onsubmit="submitForm()">
+            <!-- Contact Section Heading-->
+            <h2 class="text-center text-uppercase pt-3">Enter
+              Your Exam Details</h2>
+            </br>
+
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center col-md">
+              <div class="container col-lg-6">
+                <div class="card bg-light shadow rounded m-2">
+                  <div class="card-header text-center font-weight-bold bg-warning">JEE Details</div>
+                  <div class="card-body" style="background-color: antiquewhite;">
+                    <form method="post" id="inputRankForm" onsubmit="submitForm()">
                       <div class="row justify-content-between text-left">
-                          <div class="form-group col-sm-6 flex-column d-flex">
-                              <label for="inputGenderSelect">Gender</label>
-                              <select name="gender" class="form-select" id="inputGenderSelect">
-                                  <option value="Gender-Neutral">Male</option>
-                                  <option value="Female-only (including Supernumerary)">Female</option>
-                              </select>
-                          </div>
-                          <div class="form-group col-sm-6 flex-column d-flex">
-                              <label for="inputCatagorySelect">Category</label>
-                              <select name="catagory" class="form-select" id="inputCatagorySelect">
-                                  <option value="OPEN">OPEN</option>
-                                  <option value="OPEN (PwD)">OPEN (PwD)</option>
-                                  <option value="EWS">EWS</option>
-                                  <option value="EWS (PwD)">EWS (PwD)</option>
-                                  <option value="OBC-NCL">OBC-NCL</option>
-                                  <option value="OBC-NCL (PwD)">OBC-NCL (PwD)</option>
-                                  <option value="SC">SC</option>
-                                  <option value="SC (PwD)">SC (PwD)</option>
-                                  <option value="ST">ST</option>
-                                  <option value="ST (PwD)">ST (PwD)</option>
-                              </select>
-                          </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                          <label for="inputGenderSelect">Gender</label>
+                          <select name="gender" class="form-select" id="inputGenderSelect">
+                            <option value="Gender-Neutral">Male</option>
+                            <option value="Female-only (including Supernumerary)">Female</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                          <label for="inputCatagorySelect">Category</label>
+                          <select name="catagory" class="form-select" id="inputCatagorySelect">
+                            <option value="OPEN">OPEN</option>
+                            <option value="OPEN (PwD)">OPEN (PwD)</option>
+                            <option value="EWS">EWS</option>
+                            <option value="EWS (PwD)">EWS (PwD)</option>
+                            <option value="OBC-NCL">OBC-NCL</option>
+                            <option value="OBC-NCL (PwD)">OBC-NCL (PwD)</option>
+                            <option value="SC">SC</option>
+                            <option value="SC (PwD)">SC (PwD)</option>
+                            <option value="ST">ST</option>
+                            <option value="ST (PwD)">ST (PwD)</option>
+                          </select>
+                        </div>
                       </div>
 
                       <div class="row justify-content-between">
-                          <div class="form-group col-sm-6 flex-column d-flex">
-                              <label for="inputMainsGeneralRank">Mains General Rank</label>
-                              <input name="mains_gen_rank" id="inputMainsGeneralRank" class="form-control"
-                                  type="number"
-                                  placeholder="Mains General Rank (optional)">
-                          </div>
-                          <div class="form-group col-sm-6 flex-column d-flex">
-                              <label for="inputMainsCatagoryRank">Mains Category Rank</label>
-                              <input name="mains_cat_rank" id="inputMainsCatagoryRank" class="form-control"
-                                  type="number"
-                                  placeholder="Mains Catagory Rank (optional)">
-                          </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                          <label for="inputMainsGeneralRank">Mains General Rank</label>
+                          <input name="mains_gen_rank" id="inputMainsGeneralRank" class="form-control" type="number"
+                            placeholder="Mains General Rank (optional)">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                          <label for="inputMainsCatagoryRank">Mains Category Rank</label>
+                          <input name="mains_cat_rank" id="inputMainsCatagoryRank" class="form-control" type="number"
+                            placeholder="Mains Catagory Rank (optional)">
+                        </div>
                       </div>
 
                       <hr>
 
                       <div class="row justify-content-between text-left">
-                          <div class="form-group col-sm-6 flex-column d-flex">
-                              <label for="inputAdvancedGeneralRank">Advanced General Rank</label>
-                              <input name="adv_gen_rank" id="inputAdvancedGeneralRank" class="form-control"
-                                  type="number"
-                                  placeholder="Advanced General Rank (optional)">
-                          </div>
-                          <div class="form-group col-sm-6 flex-column d-flex">
-                              <label for="inputAdvancedCatagoryRank">Advanced Category Rank</label>
-                              <input name="adv_cat_rank" id="inputAdvancedCatagoryRank" class="form-control"
-                                  type="number"
-                                  placeholder="Advanced Catagory Rank (optional)">
-                          </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                          <label for="inputAdvancedGeneralRank">Advanced General Rank</label>
+                          <input name="adv_gen_rank" id="inputAdvancedGeneralRank" class="form-control" type="number"
+                            placeholder="Advanced General Rank (optional)">
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                          <label for="inputAdvancedCatagoryRank">Advanced Category Rank</label>
+                          <input name="adv_cat_rank" id="inputAdvancedCatagoryRank" class="form-control" type="number"
+                            placeholder="Advanced Catagory Rank (optional)">
+                        </div>
                       </div>
 
                       <hr>
                       <div class="row justify-content-between text-left">
-                          <div class="form-group col-sm-6 flex-column d-flex">
-                              <label for="inputYearSelect">Year</label>
-                              <select name="year" class="form-select" id="inputYearSelect">
-                                  <option selected value="2022">2022</option>
-                                  <option value="2021">2021</option>
-                                  <option value="2020">2020</option>
-                                  <option value="2019">2019</option>
-                                  <option value="2018">2018</option>
-                                  <option value="2017">2017</option>
-                                  <option value="2016">2016</option>
-                              </select>
-                          </div>
-                          <div class="form-group col-sm-6 flex-column d-flex">
-                              <label for="inputMarginSelect">Opening and Closing Rank margin</label>
-                              <select name="margin" class="form-select" id="inputMarginSelect">
-                                  <option value="0.05">5%</option>
-                                  <option selected value="0.1">10%(Default)</option>
-                                  <option value="0.15">15%</option>
-                                  <option value="0.2">20%</option>
-                                  <option value="0.25">25%</option>
-                                  <option value="0.3">30%</option>
-                              </select>
-                          </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                          <label for="inputYearSelect">Year</label>
+                          <select name="year" class="form-select" id="inputYearSelect">
+                            <option selected value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                          <label for="inputMarginSelect">Opening and Closing Rank margin</label>
+                          <select name="margin" class="form-select" id="inputMarginSelect">
+                            <option value="0.05">5%</option>
+                            <option selected value="0.1">10%(Default)</option>
+                            <option value="0.15">15%</option>
+                            <option value="0.2">20%</option>
+                            <option value="0.25">25%</option>
+                            <option value="0.3">30%</option>
+                          </select>
+                        </div>
                       </div>
-                      <br/>
+                      <br />
                       <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                  <hr/>
-                  <div class="card-header text-center font-weight-bold pt-1 bg-warning">General Rank Converter</div>
-                  <form id="rankConverterForm">
+                    </form>
+                    <hr />
+                    <div class="card-header text-center font-weight-bold pt-1 bg-warning">General Rank Converter</div>
+                    <form id="rankConverterForm">
                       <div>
-                          <label for="inputGeneralRank">Category Rank converter</label>
-                          <input name="gen_rank" id="inputGeneralRank" class="form-control" type="number"
-                              placeholder="General Rank">
-                          <br/>
+                        <label for="inputGeneralRank">Category Rank converter</label>
+                        <input name="gen_rank" id="inputGeneralRank" class="form-control" type="number"
+                          placeholder="General Rank">
+                        <br />
                       </div>
                       <button type="submit" class="btn btn-primary">Convert</button>
-                  </form>
-                <div id="all_ranks">
+                    </form>
+                    <div id="all_ranks">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container col-lg-6">
+                <h3>Disclaimer</h3>
+                <ul>
+                  <li>We strive to provide accurate information from official sources or internet sources.</li>
+                  <li>The college admission predictions made by our website based on JEE rank are for informational
+                    purposes only and should not be considered as absolute or final.
+                  </li>
+                  <li>The category rank converter is an approximate tool based on JEE Mains 2022 data.</li>
+                  <li>This website is intended to list out all possible colleges based on the colleges allotted to
+                    students according to their ranking.
+                  </li>
+                  <li>Every year, seats are added to all branches. Therefore, kindly use the rank margin
+                    accordingly.
+                  </li>
+                  <li>This website is only for reference and ease in listing out colleges.</li>
+                  <br>
+                  <li>The abbreviations used in the JoSAA list for quota are as follows:
+                    <ul>
+                      <div class="row" style="font-weight: bold;">
+                        <div class="col-lg-6">
+                          <li>OS: Open State</li>
+                          <li>HS: Home State</li>
+                          <li>AI: All India</li>
+                        </div>
+                        <div class="col-lg-6">
+                          <li>LA: Territory of Ladakh</li>
+                          <li>GO: Goa</li>
+                          <li>JK: Jammu and Kashmir</li>
+                        </div>
+                      </div>
+                    </ul>
+                  </li>
+                  <li>Only AI and OS quota seats are available to everyone across India.</li>
+                  <br>
+                  <li>For official JoSAA website reference for last year's opening and closing rank, please <strong><a
+                        href="#" target="_blank">click here</a></strong>.
+                  </li>
+                  <li>For official CSAB website reference for last year's opening and closing rank, please <strong><a
+                        href="https://admissions.nic.in/CSABSpl/CSABSplReg/seatallotmentresult/currentorcr.aspx"
+                        target="_blank">click here</a></strong>.
+                  </li>
+                  <li>For JoSAA choice filling, please visit their official website <strong><a href="#"
+                        target="_blank">here</a></strong>.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+    </section>
 
-        <div class="col-lg-7">
-          <h3>Disclaimer</h3>
-            <ul>
-                    <li>We strive to provide accurate information from official sources or internet sources.</li>
-                    <li>The college admission predictions made by our website based on JEE rank are for informational
-                        purposes only and should not be considered as absolute or final.
-                    </li>
-                    <li>The category rank converter is an approximate tool based on JEE Mains 2022 data.</li>
-                    <li>This website is intended to list out all possible colleges based on the colleges allotted to
-                        students according to their ranking.
-                    </li>
-                    <li>Every year, seats are added to all branches. Therefore, kindly use the rank margin
-                        accordingly.
-                    </li>
-                    <li>This website is only for reference and ease in listing out colleges.</li>
-                    <br>
-                    <li>The abbreviations used in the JoSAA list for quota are as follows:
-                        <ul>
-                            <div class="row" style="font-weight: bold;">
-                                <div class="col-lg-6">
-                                    <li>OS: Open State</li>
-                                    <li>HS: Home State</li>
-                                    <li>AI: All India</li>
-                                </div>
-                                <div class="col-lg-6">
-                                    <li>LA: Territory of Ladakh</li>
-                                    <li>GO: Goa</li>
-                                    <li>JK: Jammu and Kashmir</li>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li>Only AI and OS quota seats are available to everyone across India.</li>
-                    <br>
-                    <li>For official JoSAA website reference for last year's opening and closing rank, please <strong><a
-                            href="#"
-                            target="_blank">click here</a></strong>.
-                    </li>
-                    <li>For official CSAB website reference for last year's opening and closing rank, please <strong><a
-                            href="https://admissions.nic.in/CSABSpl/CSABSplReg/seatallotmentresult/currentorcr.aspx"
-                            target="_blank">click here</a></strong>.
-                    </li>
-                    <li>For JoSAA choice filling, please visit their official website <strong><a
-                            href="#" target="_blank">here</a></strong>.
-                    </li>
-            </ul>
+
+
+    <section class="article-section bg-light text-dark p-1 text-justify">
+      <div class="container col-lg-12 py-4">
+        <div class="row">
+          <div class="col-md-8">
+            <article>
+              <h2>JEE Mains: Everything You Need to Know</h2>
+              <p>If you're planning to pursue a career in engineering, the Joint Entrance Examination (JEE) Mains is a
+                must-take exam. Conducted by the National Testing Agency (NTA), JEE Mains is a computer-based exam that
+                assesses a candidate's knowledge in physics, chemistry, and mathematics.</p>
+              <p>The JEE Mains exam is conducted twice a year, in January and April, and candidates can choose to appear
+                for either or both exams. The exam is divided into two papers – Paper 1 for engineering aspirants and
+                Paper 2 for architecture and planning aspirants.</p>
+              <p>The JEE Mains exam is a highly competitive exam, with lakhs of candidates appearing for it every year.
+                To crack the exam, candidates need to have a strong foundation in the subjects covered and should be
+                well-versed in problem-solving and time management skills.</p>
+              <div class="card my-2">
+                <div class="card-body">
+                  <h3 class="card-title">JEE Mains Syllabus</h3>
+                  <p class="card-text">The JEE Mains syllabus is based on the NCERT curriculum for classes 11 and 12.
+                    The topics covered in the exam include:</p>
+                  <ul class="card-text">
+                    <li>Physics - Mechanics, Thermodynamics, Electromagnetism, Optics, and Modern Physics<a href="physics.html" target="_blank"
+                        class="btn btn-primary btn-shiny">More Details</a></li>
+                    <li>Chemistry - Physical Chemistry, Organic Chemistry, and Inorganic Chemistry<a href="#"
+                        class="btn btn-primary btn-shiny">More Details</a></li>
+                    <li>Mathematics - Algebra, Trigonometry, Coordinate Geometry, Calculus, and Vectors<a href="#"
+                        class="btn btn-primary btn-shiny">More Details</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card my-2">
+                <div class="card-body">
+                  <h3>JEE Mains Exam Pattern</h3>
+                  <p>The JEE Mains exam consists of 90 questions, with each question carrying four marks. For every
+                    incorrect answer, one mark is deducted from the total score. The exam is conducted in online mode
+                    and
+                    has a duration of three hours. The paper 1 exam has three sections – Physics, Chemistry, and
+                    Mathematics, while the paper 2 exam has two sections – Mathematics and Aptitude Test.</p>
+                </div>
+              </div>
+              <div class="card my-2">
+                <div class="card-body">
+                  <h3>JEE Mains Preparation Tips</h3>
+                  <p>Preparing for the JEE Mains exam requires dedication and hard work. Here are some tips that can
+                    help
+                    you crack the exam:</p>
+                  <ul>
+                    <li>Have a clear understanding of the syllabus and exam pattern</li>
+                    <li>Make a study plan and stick to it</li>
+                    <li>Practice as many sample papers and mock tests as possible</li>
+                    <li>Revise regularly and focus on your weak areas</li>
+                    <li>Stay calm and focused during the exam</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <aside>
+              <h4>Latest News</h4>
+              <ul>
+                <li>JEE Mains 2023 application form released</li>
+                <li>JEE Mains 2023 exam dates announced</li>
+                <li>NTA introduces new exam pattern for JEE Mains 2022</li>
+              </ul>
+              <h4>Important Dates</h4>
+              <ul>
+                <li>Application form start date: <span class="date">14 February 2023</span></li>
+                <li>Last date to apply: <span class="date">07 March 2023</span></li>
+                <li>JEE Mains 2023 exam dates: <span>06, 07, 08, 09, 10, 11, and 12 April 2023</span></li>
+                <li>Result declaration: <span class="date">August 2023</span></li>
+              </ul>
+              <h4>Related Links</h4>
+              <ul>
+                <li><a href="https://jeeadv.ac.in/" target="_blank">JEE Advanced</a></li>
+                <li><a href="https://jeemain.nta.nic.in/" target="_blank">JEE Mains</a></li>
+                <li><a href="https://nta.ac.in/quiz" target="_blank">Official JEE Mains Previous Year Question Papers and Mock Test</a></li>
+                <li><a href="https://josaa.nic.in/" target="_blank">JoSAA Counselling</a></li>
+                <li><a href="#" target="_blank">Top Engineering Colleges in India</a></li>
+              </ul>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
 
 
-    <!-- <section class="bg-light text-dark" id="news">
-        <p class="h1 bg-success text-dark rounded m-3">NEWS, Information and FAQs section will be available here.</p>
-        <div class="container-md">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card mb-3">
-                        <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">News Title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-3">
-                        <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">News Title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-3">
-                        <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">News Title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-3">
-                        <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">News Title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-          
 
+
+    <!-- <section class="bg-light text-dark" id="news">
+      <p class="h1 bg-success text-dark rounded m-3">NEWS, Information and FAQs section will be available here.</p>
+      <div class="container-md">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">News Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">News Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">News Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <img src="https://via.placeholder.com/500x200" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">News Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section> -->
 
 
@@ -417,77 +512,78 @@
   </main>
 
   <hr>
-<footer class="footer text-center text-light">
+  <footer class="footer text-center text-light">
     <div class="container">
-        <div class="row">
-            <!-- Footer Social Icons-->
-            <div class="col-lg-12 mb-5 mb-lg-0">
-                <h4 class="text-uppercase mb-4">Around the Web</h4>
-                <a class="btn btn-outline-light btn-social mx-1" href="#">
-                    <i class="fab fa-fw fa-facebook-f"></i>
-                </a>
-                <a class="btn btn-outline-light btn-social mx-1" href="#">
-                    <i class="fab fa-fw fa-twitter"></i>
-                </a>
-                <a class="btn btn-outline-light btn-social mx-1" href="#">
-                    <i class="fab fa-fw fa-instagram"></i>
-                </a>
-            </div>
+      <div class="row">
+        <!-- Footer Social Icons-->
+        <div class="col-lg-12 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Around the Web</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/sarvesh.singhchauhan.1">
+            <i class="fab fa-fw fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/sarveshschauhan">
+            <i class="fab fa-fw fa-twitter"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/sarvesh.s.chauhan/">
+            <i class="fab fa-fw fa-instagram"></i>
+          </a>
         </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
 
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-<!-- Java Scripts -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/rank_predictor.js"></script>
+  <!-- Java Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/rank_predictor.js"></script>
 
-<script>
-  function submitForm() {
-    let form = document.getElementById('inputRankForm');
-    var gender = form.elements['gender'].value;
-    var category = form.elements['catagory'].value;
-    var mains_gen_rank = form.elements['mains_gen_rank'].value;
-    var mains_cat_rank = form.elements['mains_cat_rank'].value;
-    var adv_gen_rank = form.elements['adv_gen_rank'].value;
-    var adv_cat_rank = form.elements['adv_cat_rank'].value;
-    var year = form.elements['year'].value;
-    var margin = form.elements['margin'].value;
-  
-    var urlParams = new URLSearchParams({
-      gender: gender,
-      category: category,
-      mains_gen_rank: mains_gen_rank,
-      mains_cat_rank: mains_cat_rank,
-      adv_gen_rank: adv_gen_rank,
-      adv_cat_rank: adv_cat_rank,
-      year: year,
-      margin: margin
-    });
-    
-    event.preventDefault();
-    var url = 'colleges_list.html?' + urlParams.toString();
-    window.open(url, '_blank');
-  }
+  <script>
+    function submitForm() {
+      let form = document.getElementById('inputRankForm');
+      var gender = form.elements['gender'].value;
+      var category = form.elements['catagory'].value;
+      var mains_gen_rank = form.elements['mains_gen_rank'].value;
+      var mains_cat_rank = form.elements['mains_cat_rank'].value;
+      var adv_gen_rank = form.elements['adv_gen_rank'].value;
+      var adv_cat_rank = form.elements['adv_cat_rank'].value;
+      var year = form.elements['year'].value;
+      var margin = form.elements['margin'].value;
 
-  const form = document.getElementById('inputRankForm');
-  form.addEventListener("submit", function(e) {
+      var urlParams = new URLSearchParams({
+        gender: gender,
+        category: category,
+        mains_gen_rank: mains_gen_rank,
+        mains_cat_rank: mains_cat_rank,
+        adv_gen_rank: adv_gen_rank,
+        adv_cat_rank: adv_cat_rank,
+        year: year,
+        margin: margin
+      });
+
+      event.preventDefault();
+      var url = 'colleges_list.html?' + urlParams.toString();
+      window.open(url, '_blank');
+    }
+
+    const form = document.getElementById('inputRankForm');
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
       const data = new FormData(form);
-      const action = "https://script.google.com/macros/s/AKfycbzsyHJSUQ8lFNjylHOhuwglB3dvMep8crA67oZxCkAn3gpD5DH9GpoTSUaoxz7boqz_/exec";
+      const action = "";
       fetch(action, {
         method: 'POST',
         body: data,
       })
     });
-</script>
-  
+  </script>
+
 
 </body>
+
 </html>

@@ -31,6 +31,27 @@ header nav div {
   background-image:none;
 }
 
+/* Jee main article section */
+.article-section a.btn-primary {
+  background-color: lightblue;
+  color: black;
+  border: 2px solid yellow;
+  padding: 3px 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.article-section a.btn-primary:hover {
+  background-color: yellow;
+  color: blue;
+  cursor: pointer;
+}
+
+
+
 /* Footer editing */
 footer {
   padding-top: 1%;
