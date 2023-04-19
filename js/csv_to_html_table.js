@@ -145,40 +145,41 @@ function CsvToHtmlTable(options) {
           let $tableBody = $("<tbody></tbody>");
           for (let rowIdx = 1; rowIdx < Math.floor(csvData.length); rowIdx++) {
             // console.log(csvData[rowIdx]);
-
-            if (csvData[rowIdx][3] == category && csvData[rowIdx][3] != "OPEN") {
-              if (mains_cat_rank >= (low_margin) * parseInt(csvData[rowIdx][5]) && mains_cat_rank <= (high_margin) * parseInt(csvData[rowIdx][6])) {
-                if (gender == csvData[rowIdx][4] || csvData[rowIdx][4] == "Gender-Neutral" || csvData[rowIdx][4] == "NA") {
-                  let $tableBodyRow = $("<tr></tr>");
-                  for (let colIdx = 0; colIdx < csvData[rowIdx].length; colIdx++) {
-                    let $tableBodyRowTd = $("<td></td>");
-                    let cellTemplateFunc = customTemplates[colIdx];
-                    if (cellTemplateFunc) {
-                      $tableBodyRowTd.html(cellTemplateFunc(csvData[rowIdx][colIdx]));
-                    } else {
-                      $tableBodyRowTd.text(csvData[rowIdx][colIdx]);
+            if ( !(csvData[rowIdx][1].includes("Architecture")) && !(csvData[rowIdx][1].includes("Planning")) ) {
+              if (csvData[rowIdx][3] == category && csvData[rowIdx][3] != "OPEN") {
+                if (mains_cat_rank >= (low_margin) * parseInt(csvData[rowIdx][5]) && mains_cat_rank <= (high_margin) * parseInt(csvData[rowIdx][6])) {
+                  if (gender == csvData[rowIdx][4] || csvData[rowIdx][4] == "Gender-Neutral" || csvData[rowIdx][4] == "NA") {
+                    let $tableBodyRow = $("<tr></tr>");
+                    for (let colIdx = 0; colIdx < csvData[rowIdx].length; colIdx++) {
+                      let $tableBodyRowTd = $("<td></td>");
+                      let cellTemplateFunc = customTemplates[colIdx];
+                      if (cellTemplateFunc) {
+                        $tableBodyRowTd.html(cellTemplateFunc(csvData[rowIdx][colIdx]));
+                      } else {
+                        $tableBodyRowTd.text(csvData[rowIdx][colIdx]);
+                      }
+                      $tableBodyRow.append($tableBodyRowTd);
+                      $tableBody.append($tableBodyRow);
                     }
-                    $tableBodyRow.append($tableBodyRowTd);
-                    $tableBody.append($tableBodyRow);
                   }
                 }
               }
-            }
-            if (csvData[rowIdx][3] == "OPEN") {
-              if (mains_gen_rank >= (low_margin) * parseInt(csvData[rowIdx][5]) && mains_gen_rank <= (high_margin) * parseInt(csvData[rowIdx][6])) {
-                if (gender == csvData[rowIdx][4] || csvData[rowIdx][4] == "Gender-Neutral" || csvData[rowIdx][4] == "NA") {
-                  let $tableBodyRow = $("<tr></tr>");
-                  for (let colIdx = 0; colIdx < csvData[rowIdx].length; colIdx++) {
-                    let $tableBodyRowTd = $("<td></td>");
-                    let cellTemplateFunc = customTemplates[colIdx];
-                    if (cellTemplateFunc) {
-                      $tableBodyRowTd.html(cellTemplateFunc(csvData[rowIdx][colIdx]));
-                    } else {
-                      $tableBodyRowTd.text(csvData[rowIdx][colIdx]);
+              if (csvData[rowIdx][3] == "OPEN") {
+                if (mains_gen_rank >= (low_margin) * parseInt(csvData[rowIdx][5]) && mains_gen_rank <= (high_margin) * parseInt(csvData[rowIdx][6])) {
+                  if (gender == csvData[rowIdx][4] || csvData[rowIdx][4] == "Gender-Neutral" || csvData[rowIdx][4] == "NA") {
+                    let $tableBodyRow = $("<tr></tr>");
+                    for (let colIdx = 0; colIdx < csvData[rowIdx].length; colIdx++) {
+                      let $tableBodyRowTd = $("<td></td>");
+                      let cellTemplateFunc = customTemplates[colIdx];
+                      if (cellTemplateFunc) {
+                        $tableBodyRowTd.html(cellTemplateFunc(csvData[rowIdx][colIdx]));
+                      } else {
+                        $tableBodyRowTd.text(csvData[rowIdx][colIdx]);
+                      }
+                      $tableBodyRow.append($tableBodyRowTd);
+                      // console.log($tableBodyRow);
+                      $tableBody.append($tableBodyRow);
                     }
-                    $tableBodyRow.append($tableBodyRowTd);
-                    // console.log($tableBodyRow);
-                    $tableBody.append($tableBodyRow);
                   }
                 }
               }
